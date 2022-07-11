@@ -1,6 +1,6 @@
-# sveltekit
+# sveltekit-bun
 
-This repo contains code for a SvelteKit application generated using the [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte) package.
+This repo contains code for a SvelteKit application generated using the [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte) package that generates a [Bun](https://bun.sh) server.
 
 To create your own SvelteKit project, you can either
 
@@ -12,10 +12,8 @@ To create your own SvelteKit project, you can either
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
-npm run dev
+cd build; bun build/index.js
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
 ## Building
@@ -28,4 +26,4 @@ npm run build
 
 ## Deploying to Render
 
-Follow the deploy instructions at https://render.com/docs/deploy-sveltekit
+Follow the deploy instructions at https://render.com/docs/deploy-sveltekit#deploy-as-a-bun-server

@@ -3,4 +3,13 @@ services:
     name: sveltekit
     env: node
     buildCommand: npm install && npm run build
-    startCommand: node build/index.js
+    startCommand: cd build; bun index.js
+    envVars:
+      - key: ORIGIN
+        value: https://my.site
+      - key: PROTOCOL_HEADER
+        value: x-forwarded-proto
+      - key: HOST_HEADER
+        value: x-forwarded-host
+      - key: ADDRESS_HEADER
+        value: True-Client-IP

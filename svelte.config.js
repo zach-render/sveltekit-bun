@@ -1,15 +1,19 @@
 /** @type {import('@sveltejs/kit').Config} */
-
-import node from '@sveltejs/adapter-node';
+import adapter from 'svelte-adapter-bun';
 
 const config = {
 	kit: {
-		adapter: node(),
-		
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE']
-		}
+		adapter: adapter({
+			out: "build",
+			development: true,
+			// precompress: true,
+			precompress: {
+			  brotli: true,
+			  gzip: true,
+			  files: ["htm", "html"]
+			},
+			dynamic_origin: true,
+		  }),
 	}
 };
 
