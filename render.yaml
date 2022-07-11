@@ -3,7 +3,7 @@ services:
     name: sveltekit-bun
     env: node
     buildCommand: curl -fsSL https://bun.sh/install | bash; npm install && npm run build
-    startCommand: cd build; ./opt/render/.bun/bin/bun index.js
+    startCommand: ./opt/render/.bun/bin/bun build/index.js
     envVars:
       - key: ORIGIN
         value: https://my.site
