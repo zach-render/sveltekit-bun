@@ -5,6 +5,8 @@ services:
     buildCommand: curl -fsSL https://bun.sh/install | bash; npm install && npm run build
     startCommand: ./opt/render/.bun/bin/bun build/index.js
     envVars:
+      - key: NODE_VERSION
+        value: 16.9
       - key: ORIGIN
         value: https://my.site
       - key: PROTOCOL_HEADER
